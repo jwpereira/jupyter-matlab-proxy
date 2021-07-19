@@ -400,5 +400,8 @@ def main():
     site = web.TCPSite(
         runner, host=app["settings"]["host_interface"], port=app["settings"]["app_port"]
     )
+
+    logger.info("Site is starting")
     loop.run_until_complete(site.start())
+    logger.info("Running forever")
     loop.run_forever()
