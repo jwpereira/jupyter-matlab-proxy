@@ -13,7 +13,7 @@ def get_matlab_path():
     if which_matlab is None:
         return None
     # return Path(which_matlab).resolve().parent.parent
-    return "/usr/local/matlab"
+    return Path("/usr/local/matlab").resolve()
 
 
 def get_matlab_version(matlab_path):
